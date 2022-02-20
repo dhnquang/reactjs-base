@@ -1,19 +1,26 @@
+import { Header } from 'components/header-bar';
+import { SideBar } from 'components/side-bar';
+import { Widgets } from 'components/widgets';
+import Feed from './pages/feeds';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    // BEM naming convention
+    <div className="app">
+      {/* Header */}
+      <Header />
+
+      {/* App body */}
+      <div className="app__body">
+        {/* Sidebar */}
+        <SideBar />
+        {/* Feed */}
+        <Feed />
+        {/* Widgets */}
+        <Widgets />
+      </div>
     </div>
   );
 }
